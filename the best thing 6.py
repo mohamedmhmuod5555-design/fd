@@ -21,7 +21,7 @@ if 'feed' not in st.session_state:
  st.session_state.feed=0
 
 num1 = st.session_state.num1
-num2 = st.session_state.num2
+num2 = st.session_state.num1
 sign = st.session_state.sign
 if sign=='+':
  sc=num1+num2
@@ -30,6 +30,8 @@ if sign=='-':
 if sign=='*':
  sc=num1*num2
 if sign=='/':
+ if num1<num2:
+   st.session_state.num1>st.session_state.num1
  sc=num1/num2
  sc=round(sc,2)
 st.title("Welcome to Math Game ")
