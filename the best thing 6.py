@@ -31,6 +31,7 @@ if sign=='*':
  sc=num1*num2
 if sign=='/':
  sc=num1/num2
+ round(sc,2)
 st.title("Welcome to Math Game ")
 st.write(num1,sign,num2)
 number=st.number_input("ادخل النتيجه ")
@@ -44,7 +45,7 @@ if st.button("تأكيد التخمين "):
    st.session_state.feed="false" 
 if st.session_state.feed=="correct":
   st.success("انك اسطوره يا عبقري الرياضه ")
-  st.ballons()
+  st.balloons()
   st.session_state.feed=None
   st.session_state.num1=random.randint(1,st.session_state.ran)
   st.session_state.num2=random.randint(1,st.session_state.ran)
