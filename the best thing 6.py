@@ -1,6 +1,7 @@
 import random
 import time
 import streamlit as st
+from fractions import Fraction
 if 'ran' not in st.session_state or st.session_state.ran < 1:
   st.session_state.ran=20
 if 'level' not in st.session_state:
@@ -30,7 +31,7 @@ if sign=='-':
 if sign=='*':
  sc=num1*num2
 if sign=='/':
- sc = round(num1 / num2, 2)
+ sc =Fraction(num1 / num2)
 st.title("Welcome to Math Game ")
 st.write(num1,sign,num2)
 number=st.number_input("ادخل النتيجه ")
